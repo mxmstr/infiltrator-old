@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Common/Scripts/Root.gd" type="Script" id=1]
+[ext_resource path="res://Common/Models/Lab_Floor1.dae" type="PackedScene" id=2]
+[ext_resource path="res://Common/Scenes/CameraRig.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Common/Scenes/Spy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Common/Scenes/Guard.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Common/Scenes/Item.tscn" type="PackedScene" id=6]
+
+[node name="Root" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Map" parent="." index="0" instance=ExtResource( 2 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="CameraRig" parent="." index="1" instance=ExtResource( 3 )]
+
+transform = Transform( 0.707107, 0.298836, -0.640856, 0, 0.906308, 0.422618, 0.707107, -0.298836, 0.640856, -13.0017, 4.87056, 11.2031 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Spy" parent="." index="2" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2512, 0.176998, 7.06572 )
+
+[node name="Guard" parent="." index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.906, 0.1843, 5.71854 )
+
+[node name="Item" parent="." index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39885, 0.562072, 5.63054 )
+
+
